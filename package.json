@@ -6,8 +6,8 @@
   "scripts": {
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
     "sass": "sass --watch ./sass/main.scss:public/css/style.css"
-    
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ghislainvava/P3_vachet_ghislain_28102020.git"

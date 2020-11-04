@@ -1,0 +1,86 @@
+#Localisation {
+    height: 50px;
+    @include flexcenter;
+    background-color:#e5e5e5;  
+    box-shadow: inset 0px 3px 3px #c4c4c4;
+
+}
+
+.fa-map-marker-alt{
+    margin-right: 20px;
+}
+
+#decouverte {
+    @include flexcenter;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 280px;
+    background-color: #f4f4f4 ;
+}
+
+.explorer {
+    height: 60px;
+    text-align: center;
+}
+
+h2{
+    width: 90%;
+}
+
+
+                        //fonctionnement//
+
+#Fonctionnement{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#choise{
+    display:flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    height: 440px;
+    width: 96%;
+    margin: auto;      
+}
+
+.choix{
+     height: 75px;
+     display: flex;
+     align-items: center;
+     background-color: #f4f4f4;
+     border-radius: 20px;
+        &:hover{
+            background-color: #f2e7ff;
+        }
+
+
+}
+
+.dispo{
+   display: flex;
+   align-items: center;
+   margin-right: 50px;
+
+    i{
+        font-size: large; 
+    }
+}
+
+.circle{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: $primary;
+    @include flexcenter;
+    align-items: center;
+    margin-left: -12px;
+    margin-right: 30px;
+
+        p{
+            color: white;
+            font-size: small;
+        }
+}
+           
+

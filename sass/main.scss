@@ -1,4 +1,4 @@
-@import "./layout/form";
+//@import "./layout/form";
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -13,4 +13,5 @@
 //@import "./pages/work";
 //@import "./pages/about";
 //@import "./pages/project";
-//@import "./layout/article";
+@import "./layout/article";
+@import "./layout/section";
