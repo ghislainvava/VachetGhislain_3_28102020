@@ -17,12 +17,15 @@ header {
   align-items: center;
   height: 75px;
 }
-
-#retour {
+header div {
+  position: absolute;
   float: left;
-  margin-left: 20px;
   margin-top: 10px;
-  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 #Localisation {

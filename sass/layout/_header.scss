@@ -2,11 +2,17 @@ header{
    @include flexcenter;
    align-items: center;
     height: 75px;
+
+    div{
+        position: absolute;
+        float: left;
+        //margin-left: 20px;
+        margin-top: 10px;
+    }
+   
 }
 
-#retour {
-    float: left;
-    margin-left: 20px;
-    margin-top: 10px;
-    color: white;
+a{
+    text-decoration: none;
+    color: black;
 }
