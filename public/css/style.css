@@ -11,21 +11,23 @@ h1 {
 }
 
 header {
+  height: 75px;
+  width: 100%;
+}
+header a {
+  position: absolute;
+  left: 20px;
+  text-decoration: none;
+  color: black;
+}
+header figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
-  height: 75px;
+  position: relative;
 }
-header div {
-  position: absolute;
-  float: left;
-  margin-top: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+header figure img {
+  height: 30px;
 }
 
 #Localisation {
@@ -158,6 +160,12 @@ h2 {
   justify-content: space-around;
   height: 1096px;
 }
+#restaurants a {
+  height: 250px;
+  border-radius: 10px;
+  margin: 0;
+  text-decoration: none;
+}
 
 .restaurant {
   height: 250px;
@@ -244,6 +252,11 @@ footer a {
 }
 footer h1 {
   margin: 0;
+}
+
+img {
+  height: 250px;
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

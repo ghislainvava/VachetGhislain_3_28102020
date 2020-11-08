@@ -1,18 +1,30 @@
 header{
-   @include flexcenter;
-   align-items: center;
+   
     height: 75px;
-
-    div{
+    
+    width: 100%;
+    
+   
+    
+    a{
         position: absolute;
-        float: left;
-        //margin-left: 20px;
-        margin-top: 10px;
+        left: 20px;
+        text-decoration: none;
+        color: black;
+       
+    }
+
+    figure{
+        
+        @include flexcenter;
+        position: relative;
+        
+            img {
+                
+                height: 30px;
+            }
+        
     }
    
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
