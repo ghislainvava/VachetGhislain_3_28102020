@@ -77,13 +77,17 @@ header figure img {
 .exploreButton {
   color: white;
   border-radius: 30px;
-  height: 50px;
-  width: 60%;
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
-  margin-top: 18px;
+  padding: auto 15px;
   font-size: 16px;
-  margin-bottom: 5px;
+  box-shadow: 0px 4px 8px #acacac;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.exploreButton:hover {
+  opacity: 0.9;
 }
 
 #Fonctionnement {
@@ -152,12 +156,13 @@ header figure img {
 section {
   background-color: #f4f4f4;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h2 {
   width: 88%;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 #restaurants {
@@ -169,10 +174,10 @@ h2 {
   justify-content: space-around;
   height: 1096px;
 }
-#restaurants medaillon {
+#restaurants .medaillon {
   height: 250px;
-  border-radius: 10px;
-  margin: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px #acacac;
 }
 
 .restaurant {
@@ -190,8 +195,8 @@ h2 {
   object-fit: cover;
   height: 173px;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .presentation .un {
   object-position: 50% 100%;
@@ -260,7 +265,10 @@ h2 {
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
+  -o-background-clip: transparent;
+  -webkit-background-clip: text;
 }
 
 footer {
@@ -303,42 +311,75 @@ img {
   margin-right: 20px;
   margin-left: 20px;
 }
+.carte .souligné {
+  margin-left: 20px;
+}
+.carte .souligné h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 0px;
+}
+.carte .souligné .trait {
+  width: 40px;
+  height: 3px;
+  border-bottom: #99E2D0 3px solid;
+}
+.carte .exploreButton {
+  color: white;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: auto 15px;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px #acacac;
+  height: 50px;
+  margin: 30px auto 70px auto;
+}
+.carte .exploreButton p {
+  margin: auto 20px;
+}
 
 .entrées, .plats, .désserts {
   background-color: #f2f2f2;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: column;
-  margin-bottom: 18px;
   width: 100%;
-  margin: 25px 20px;
-}
-.entrées h2, .plats h2, .désserts h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 300;
+  margin: 18px auto;
 }
 
 .MetsAChoisir {
   display: flex;
-  justify-content: space-between;
   background-color: white;
   width: 90%;
-  border-radius: 10px;
-  margin: 15px 0;
+  border-radius: 15px;
+  margin: 7px 0;
 }
-.MetsAChoisir .descript {
+.MetsAChoisir .DescPlat {
   margin-left: 10px;
+  margin-right: 20px;
+  width: 100%;
 }
-.MetsAChoisir .descript h3 {
-  margin-bottom: 0px;
+.MetsAChoisir .DescPlat h3 {
+  margin: 10px 0 0 0px;
+  font-weight: 400;
 }
-.MetsAChoisir .descript h4 {
-  font-weight: 300;
-  font-size: 18px;
-  margin-top: 0px;
+.MetsAChoisir .DescPlat .price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.MetsAChoisir .descript p {
-  margin-top: 30px;
+.MetsAChoisir .DescPlat .price h4 {
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.MetsAChoisir .DescPlat .price p {
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .check {

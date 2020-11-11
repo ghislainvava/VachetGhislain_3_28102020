@@ -14,6 +14,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/ghislainvava/P3_vachet_ghislain_28102020/issues"
   },
