@@ -1,60 +1,47 @@
 aside{
     width: 100%;
     @include flexcenter;
-    flex-direction: column;
-      
+    flex-direction: column;     
 }
 
 img {
     height: 250px;
 }
 
-
 .carte{
-
     background-color: $greypale;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
     display: flex;
     flex-flow: column;
-
         .titre{
             display: flex;
             justify-content: space-between;
             margin-right: 20px;
             margin-left: 20px;  
         }
-
         .souligné{
             margin-left: 20px;
-
             h2{
-
                 font-size: 16px;
                 font-weight: 300;
                 margin-left: 0px;
             }
-
             .trait{
                 width: 40px ;
                 height: 3px;
                 border-bottom: $tertiary 3px solid ;   
             }
         }
-
         .exploreButton{
             @include buttongradient;
             margin: 30px auto 70px auto; 
               p{
                 margin: auto 20px;
               }
-            
-        }
-        
+        }       
 }
-
-
 
 .entrées, .plats, .désserts{
     background-color: $greypale;
@@ -123,20 +110,18 @@ img {
                     .fa-check-circle {
                         color: white;
                         animation: rotate 0.3s forwards;
-                    }
-                   
+                    } 
                 }
+         }
 
-            }
-
-            .check{
+        .check{
                 opacity: 0;
                 background-color: $tertiary;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
                 margin-right: 0;
                 @include flexcenter;
-            }
+        }
             
 }
 

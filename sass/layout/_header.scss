@@ -20,25 +20,22 @@ header{
             }
     }  
 }
-
 .demarage {
-    position:absolute; 
+    position:fixed; 
     width:100%; 
     height:100%; 
     z-index: 1;
     @include flexcenter;
     background-color: white;
-    
-    animation: backgroundStar linear 3s forwards;
-    opacity: 1;
+    overflow: hidden;
+
+    animation: backgroudStar linear 3s forwards;
+
+    .fa-spinner{
+        font-size: 4em;
+        animation: spin 1000ms ease-in-out 3 forwards;
+      
+    }
 
         
-}
-
-.fa-spinner{
-    font-size: 4em;
-    animation: spin 1000ms ease-in-out 3;
-    
-   
-
 }
