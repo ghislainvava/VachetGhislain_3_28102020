@@ -1,17 +1,13 @@
 header{
    
-    height: 75px;
-    
+    height: 75px;  
     width: 100%;
-    
-   
     
     a{
         position: absolute;
         left: 20px;
         text-decoration: none;
         color: black;
-       
     }
 
     figure{
@@ -20,11 +16,29 @@ header{
         position: relative;
         
             img {
-                
                 height: 30px;
             }
-        
-    }
-   
+    }  
 }
 
+.demarage {
+    position:absolute; 
+    width:100%; 
+    height:100%; 
+    z-index: 1;
+    @include flexcenter;
+    background-color: white;
+    
+    animation: backgroundStar linear 3s forwards;
+    opacity: 1;
+
+        
+}
+
+.fa-spinner{
+    font-size: 4em;
+    animation: spin 1000ms ease-in-out 3;
+    
+   
+
+}

@@ -7,6 +7,68 @@
     opacity: 1;
   }
 }
+@keyframes survol {
+  0% {
+    box-shadow: 0px 4px 8px #acacac;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0px 6px 8px 3px #acacac;
+    opacity: 0.8;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes backgroudStar {
+  0% {
+    transform: translate(1);
+  }
+  100% {
+    transform: translate(-9999px);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@keyframes transition {
+  0% {
+    margin-top: -70px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes checks {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 70px;
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: 0 auto;
 }
@@ -37,6 +99,24 @@ header figure {
 }
 header figure img {
   height: 30px;
+}
+
+.demarage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: backgroundStar linear 3s forwards;
+  opacity: 1;
+}
+
+.fa-spinner {
+  font-size: 4em;
+  animation: spin 1000ms ease-in-out 3;
 }
 
 #Localisation {
@@ -81,13 +161,13 @@ header figure img {
   background: linear-gradient(#FF79DA, #9356DC);
   padding: auto 15px;
   font-size: 16px;
-  box-shadow: 0px 4px 8px #acacac;
+  box-shadow: 0px 4px 8px 1px #acacac;
   height: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }
 .exploreButton:hover {
-  opacity: 0.9;
+  animation: survol 800ms;
 }
 
 #Fonctionnement {
@@ -177,7 +257,7 @@ h2 {
 #restaurants .medaillon {
   height: 250px;
   border-radius: 15px;
-  box-shadow: 0px 4px 8px #acacac;
+  box-shadow: 0px 4px 8px 1px #acacac;
 }
 
 .restaurant {
@@ -331,7 +411,7 @@ img {
   background: linear-gradient(#FF79DA, #9356DC);
   padding: auto 15px;
   font-size: 16px;
-  box-shadow: 0px 4px 8px #acacac;
+  box-shadow: 0px 4px 8px 1px #acacac;
   height: 50px;
   margin: 30px auto 70px auto;
 }
@@ -347,6 +427,21 @@ img {
   flex-flow: column;
   width: 100%;
   margin: 18px auto;
+}
+
+.entrées {
+  opacity: 0;
+  animation: transition 0.3s ease-in-out 0.5s forwards;
+}
+
+.plats {
+  opacity: 0;
+  animation: transition 0.3s ease-in-out 1s forwards;
+}
+
+.désserts {
+  opacity: 0;
+  animation: transition 0.3s ease-in-out 1.5s forwards;
 }
 
 .MetsAChoisir {
@@ -375,23 +470,49 @@ img {
   font-size: 16px;
   margin-top: 5px;
   margin-bottom: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .MetsAChoisir .DescPlat .price p {
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 15px;
 }
-
-.check {
-  display: none;
+.MetsAChoisir .DescPlat:hover + .check {
+  opacity: 1;
+  animation: checks 0.3s linear forwards;
+}
+.MetsAChoisir .DescPlat:hover + .check .fa-check-circle {
+  color: white;
+  animation: rotate 0.3s forwards;
+}
+.MetsAChoisir .check {
+  opacity: 0;
   background-color: #99E2D0;
-  height: 100%;
-  width: 60px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.check .fa-check-circle {
-  color: white;
+
+.demarage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: backgroundStar linear 3s;
+}
+
+.fa-spinner {
+  font-size: 4em;
+  animation: spin 1000ms ease-in-out 3;
 }
 
 /*# sourceMappingURL=style.css.map */

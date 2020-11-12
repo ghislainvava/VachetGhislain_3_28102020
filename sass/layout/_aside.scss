@@ -39,8 +39,7 @@ img {
             .trait{
                 width: 40px ;
                 height: 3px;
-                border-bottom: $tertiary 3px solid ;
-                
+                border-bottom: $tertiary 3px solid ;   
             }
         }
 
@@ -62,10 +61,22 @@ img {
     @include flexcenter;
     flex-flow: column;
     width: 100%;
-    margin: 18px auto;  
+    margin: 18px auto;    
+}
 
-    
-    
+.entrées{
+    opacity: 0;
+    animation: transition 0.3s ease-in-out 0.5s forwards;
+}
+
+.plats{
+    opacity: 0;
+    animation: transition 0.3s ease-in-out 1s forwards;
+}
+
+.désserts{
+    opacity: 0;
+    animation: transition 0.3s ease-in-out 1.5s forwards;
 }
 
 .MetsAChoisir {
@@ -76,13 +87,11 @@ img {
     margin: 7px 0;
         
         .DescPlat{
-
             margin-left: 10px;
              margin-right: 20px;
              width: 100%;
             
                 & h3{
-                    
                     margin: 10px 0 0 0px;
                     font-weight: 400;
                 }
@@ -92,37 +101,44 @@ img {
                     display:flex;
                     justify-content: space-between;
                     
-                    
-
                     h4{
                             font-weight: 200;
                             font-size: 16px;
                             margin-top: 5px;
                             margin-bottom: 15px;
-                           
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
                         }
                     p{
                             font-weight: bold ;
                             margin-top: 5px;
-                            margin-bottom: 15px;
-                            
+                            margin-bottom: 15px;    
                         }
                 }
                 
+                &:hover + .check{ 
+                    opacity: 1;
+                    animation: checks 0.3s linear forwards; 
+                    .fa-check-circle {
+                        color: white;
+                        animation: rotate 0.3s forwards;
+                    }
+                   
+                }
+
             }
+
+            .check{
+                opacity: 0;
+                background-color: $tertiary;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                margin-right: 0;
+                @include flexcenter;
+            }
+            
 }
 
-.check{
-    display: none;
-    background-color: $tertiary;
-    height: 100%;
-    width: 60px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-
-    .fa-check-circle {
-        color: white;
-    }
-}
 
 
