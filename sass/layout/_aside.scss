@@ -4,12 +4,16 @@ aside{
     flex-direction: column;     
 }
 
-img {
+.ImageResto {
     height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
 }
 
 .carte{
     background-color: $greypale;
+    margin-top: -50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
@@ -34,15 +38,15 @@ img {
                 border-bottom: $tertiary 3px solid ;   
             }
         }
-        .exploreButton{
-            @include buttongradient;
-            margin: 30px auto 70px auto; 
-              p{
-                margin: auto 20px;
-              }
-        }       
+        
 }
 
+.commander{
+    margin: 30px auto 70px auto; 
+    padding-right: 50px;        
+    padding-left: 50px;
+              
+}
 .entrées, .plats, .désserts{
     background-color: $greypale;
     @include flexcenter;
@@ -72,21 +76,32 @@ img {
     width: 90%;
     border-radius: 15px;
     margin: 7px 0;
-        
+    
+    
         .DescPlat{
             margin-left: 10px;
-             margin-right: 20px;
+             margin-right: 0px;
              width: 100%;
+             text-overflow: ellipsis;
+             overflow: hidden;
+             
+             
             
                 & h3{
+                    width: 100%;
                     margin: 10px 0 0 0px;
                     font-weight: 400;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    
                 }
 
                 .price{
                     width: 100%;
                     display:flex;
                     justify-content: space-between;
+                    margin-right: 20px;
                     
                     h4{
                             font-weight: 200;
@@ -97,20 +112,24 @@ img {
                             overflow: hidden;
                             white-space: nowrap;
                         }
-                    p{
+                   
+                        p{
                             font-weight: bold ;
                             margin-top: 5px;
-                            margin-bottom: 15px;    
+                            margin-bottom: 15px; 
+                            margin-right: 0;
+
                         }
                 }
                 
                 &:hover + .check{ 
+                    
                     opacity: 1;
                     animation: checks 0.3s linear forwards; 
-                    .fa-check-circle {
-                        color: white;
-                        animation: rotate 0.3s forwards;
-                    } 
+                        .fa-check-circle {
+                            color: white;
+                            animation: rotate 0.3s forwards;
+                        } 
                 }
          }
 
@@ -121,6 +140,7 @@ img {
                 border-bottom-right-radius: 10px;
                 margin-right: 0;
                 @include flexcenter;
+                font-size: 1.3em;
         }
             
 }
