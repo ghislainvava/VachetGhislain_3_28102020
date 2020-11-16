@@ -24,7 +24,6 @@
   100% {
     transform: rotate(360deg);
     opacity: 0;
-    z-index: -1;
   }
 }
 @keyframes backgroudStar {
@@ -75,10 +74,6 @@
   }
 }
 body {
-  margin: 0 auto;
-}
-
-body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -113,44 +108,26 @@ header figure img {
   height: 30px;
 }
 
-/*.demarage {
-    position:fixed; 
-    width:100%; 
-    height:100%; 
-    z-index: -1;
-    @include flexcenter;
-    background-color: white;
-    overflow: hidden;
-
-    //animation: backgroudStar linear 3 forwards;
-
-    .fa-spinner{
-        font-size: 4em;
-        //animation: spin 1000ms ease-in-out 3 forwards;
-
-    }
-
-
-}*/
 #star {
-  width: 2000px;
-  height: 2000px;
-  z-index: 1;
-  background-color: white;
-  animation: backgroudStar 3s linear forwards;
   position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 400px;
+  z-index: 1;
+  animation: backgroudStar 3s linear forwards;
 }
 #star #loader {
   width: 100px;
   height: 100px;
-  border: 20px solid #FF79DA;
-  border-top: 20px solid #9356DC;
-  border-bottom: 20px solid #9356DC;
   border-radius: 50%;
+  border: 20px solid #FF79DA;
+  border-bottom: 20px solid #9356DC;
+  border-left: 20px solid transparent;
   animation: spin 1000ms ease-in-out 3 forwards;
 }
 
@@ -229,11 +206,13 @@ header figure img {
   height: 75px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
   background-color: #f4f4f4;
-  border-radius: 20px;
-  box-shadow: 1px 7px 7px #e1e1e1;
+  border-radius: 25px;
   margin-top: 25px;
   margin-left: 5px;
+  box-shadow: 0 -5px 4px #f4f4f4, 1px 7px 7px #e1e1e1;
 }
 .choix:hover {
   background-color: #f2e7ff;
@@ -241,20 +220,20 @@ header figure img {
 
 .fa-store {
   color: #9356DC;
+  height: 20px;
+  margin-top: 3px;
 }
 
 .fa-list-ul, .fa-mobile-alt {
   color: #6b6b6b;
-  font-weight: 300;
+  font-size: larger;
+  margin-top: 4px;
 }
 
 .dispo {
   display: flex;
-  align-items: center;
-  margin-right: 50px;
-}
-.dispo i {
-  font-size: large;
+  position: absolute;
+  left: -10px;
 }
 
 .circle {
@@ -265,8 +244,7 @@ header figure img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -10px;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .circle p {
   color: white;
@@ -386,25 +364,50 @@ h2 {
   top: 10px;
   right: 20px;
   opacity: 0;
+}
+.container-heart__full .fa-heart::before {
   background: linear-gradient(#9356DC, #FF79DA);
-  color: transparent;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  -o-background-clip: transparent;
   -webkit-background-clip: text;
 }
 
 footer {
-  font-size: 0.8em;
   color: white;
   background-color: #282828;
-  padding: 10px 6%;
+  padding: 10px 6% 20px 6%;
 }
 footer a {
   text-decoration: none;
   color: white;
+  margin-bottom: 30px;
 }
 footer h1 {
-  margin: 0;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+footer .foot {
+  display: flex;
+  align-items: center;
+}
+footer .foot .fa-utensils {
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+footer .foot .fa-hands-helping {
+  font-size: 0.7em;
+  margin-right: 8px;
+}
+footer .foot p {
+  font-size: 1em;
+  margin: 5px 0;
+  font-size: 1em;
+  font-weight: 300;
+}
+footer p {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  font-weight: 300;
 }
 
 aside {
@@ -423,7 +426,7 @@ aside {
 }
 
 .carte {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   margin-top: -50px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -458,7 +461,7 @@ aside {
 }
 
 .entrées, .plats, .désserts {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;

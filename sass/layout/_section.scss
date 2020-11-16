@@ -107,6 +107,7 @@ h2{
         & .container-heart__full { 
             animation: heart-liker 1600ms;
             animation-fill-mode: forwards;   
+               
         }
     }
 
@@ -115,13 +116,15 @@ h2{
         top: 10px;
         right: 20px;
         opacity: 0;
-        background: linear-gradient($primary, $secondary);
-       
-        color: transparent;
-        -webkit-text-fill-color: transparent;
-        -o-background-clip: transparent;
-        -webkit-background-clip: text;
     } 
+
+    &__full .fa-heart::before {
+        background: linear-gradient($primary, $secondary);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        
+    }
 }
 
 
