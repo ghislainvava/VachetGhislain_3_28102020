@@ -73,7 +73,6 @@ h2{
             h3{
                margin: 0 15px;
             }
-       
             h4{
                 margin-left: 15px;
                 margin-top: 0px;
@@ -106,8 +105,7 @@ h2{
     &:hover {
         & .container-heart__full { 
             animation: heart-liker 1600ms;
-            animation-fill-mode: forwards;   
-               
+            animation-fill-mode: forwards;        
         }
     }
 
@@ -120,9 +118,9 @@ h2{
 
     &__full .fa-heart::before {
         background: linear-gradient($primary, $secondary);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        //-webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        color: transparent;
         
     }
 }

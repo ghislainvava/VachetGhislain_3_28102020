@@ -1,3 +1,7 @@
+body{
+    margin: auto;
+}
+
 header{
    
     height: 57px;  
@@ -15,11 +19,9 @@ header{
             }
     }
 
-    figure{
-           
+    figure{ 
         position: relative; 
-        @include flexcenter;
-       
+        @include flexcenter;  
             img {
                 height: 30px;  
             }
