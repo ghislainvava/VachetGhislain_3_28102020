@@ -33,8 +33,10 @@
 
 .exploreButton{
     @include buttongradient;
+    @include shadowLight;
    padding-left: 20px;
    padding-right: 20px;
+   
     &:hover {
         animation: survol 800ms;
     }   
