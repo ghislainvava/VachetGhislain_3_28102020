@@ -26,7 +26,7 @@
     opacity: 0;
   }
 }
-@keyframes backgroudStart {
+@keyframes backgroundStart {
   0% {
     height: 100%;
     width: 100%;
@@ -83,8 +83,6 @@ h1 {
 
 .Logo {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
-  margin-top: 5px;
 }
 
 body {
@@ -129,7 +127,7 @@ header figure img {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  animation: backgroudStart 3s linear forwards;
+  animation: backgroundStart 3s linear forwards;
 }
 #start #loader {
   width: 100px;
@@ -179,13 +177,11 @@ header figure img {
 }
 
 .exploreButton {
-  color: white;
   border-radius: 30px;
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 0 20px;
   font-size: 16px;
-  box-shadow: 0px 4px 8px 1px #acacac;
   height: 50px;
   padding-left: 20px;
   padding-right: 20px;
@@ -456,6 +452,11 @@ aside {
   display: flex;
   justify-content: space-between;
   margin: 20px 10px 10px 20px;
+}
+.carte .titre .Logo {
+  font-weight: 500;
+  font-size: 28px;
+  margin-top: 5px;
 }
 .carte .souligné {
   margin-left: 20px;
