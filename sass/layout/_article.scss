@@ -73,21 +73,28 @@
      box-shadow: 0 -5px 4px $greypale, 1px 7px 7px  rgb(225, 225, 225);
         &:hover{
             background-color: #f2e7ff;
-        }
-    }
+            .fa-list-ul ,.fa-mobile-alt, .fa-store{
+                color: $primary;
+            }
 
-.fa-store{
-    color: $primary;
-    height: 20px;
-    margin-top: 3px;   
+        }
 }
 
-.fa-list-ul ,.fa-mobile-alt{
+.fa-list-ul ,.fa-mobile-alt, .fa-store{
     color: $grey;
-    font-size: larger;
+    font-size: large;
     margin-top: 4px;   
 }
+.fa-store{
+    color: $grey;
+    margin-top: 3px;
+}
+.fa-mobile-alt{
+    color: grey;
+    font-size: x-large;
+    margin-top: 4px;
 
+}
 .dispo{ 
    display: flex;
    position: absolute;

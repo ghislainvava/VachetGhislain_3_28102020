@@ -1,5 +1,5 @@
 body{
-    margin: auto;
+    margin: 0 auto;
 }
 
 header{
@@ -28,7 +28,7 @@ header{
     }  
 }
 
-#star { 
+#start { 
     position: fixed;
     background-color: white;
     width: 100%;
@@ -37,7 +37,7 @@ header{
     bottom: 0;
     @include flexcenter;
     z-index: 1;
-    animation: backgroudStar 3s linear forwards;
+    animation: backgroudStart 3s linear forwards;
     
         #loader{ 
             width: 100px;

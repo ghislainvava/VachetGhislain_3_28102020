@@ -26,7 +26,7 @@
     opacity: 0;
   }
 }
-@keyframes backgroudStar {
+@keyframes backgroudStart {
   0% {
     height: 100%;
     width: 100%;
@@ -60,7 +60,7 @@
     margin-left: 20px;
   }
   100% {
-    width: 70px;
+    width: 80px;
     opacity: 1;
     margin-left: 20px;
   }
@@ -77,12 +77,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, .Logo {
+h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
+.Logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
 body {
-  margin: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -112,7 +118,7 @@ header figure img {
   height: 30px;
 }
 
-#star {
+#start {
   position: fixed;
   background-color: white;
   width: 100%;
@@ -123,9 +129,9 @@ header figure img {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  animation: backgroudStar 3s linear forwards;
+  animation: backgroudStart 3s linear forwards;
 }
-#star #loader {
+#start #loader {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -221,16 +227,24 @@ header figure img {
 .choix:hover {
   background-color: #f2e7ff;
 }
+.choix:hover .fa-list-ul, .choix:hover .fa-mobile-alt, .choix:hover .fa-store {
+  color: #9356DC;
+}
+
+.fa-list-ul, .fa-mobile-alt, .fa-store {
+  color: #6b6b6b;
+  font-size: large;
+  margin-top: 4px;
+}
 
 .fa-store {
-  color: #9356DC;
-  height: 20px;
+  color: #6b6b6b;
   margin-top: 3px;
 }
 
-.fa-list-ul, .fa-mobile-alt {
-  color: #6b6b6b;
-  font-size: larger;
+.fa-mobile-alt {
+  color: grey;
+  font-size: x-large;
   margin-top: 4px;
 }
 
@@ -388,6 +402,7 @@ footer a {
 footer h1 {
   margin: 10px 0;
   font-size: 1.1em;
+  font-weight: 100;
 }
 footer .foot {
   display: flex;
@@ -440,8 +455,7 @@ aside {
 .carte .titre {
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 20px 10px 10px 20px;
 }
 .carte .souligné {
   margin-left: 20px;
@@ -449,7 +463,9 @@ aside {
 .carte .souligné h2 {
   font-size: 16px;
   font-weight: 300;
+  margin-top: 10px;
   margin-left: 0px;
+  margin-bottom: 0px;
 }
 .carte .souligné .trait {
   width: 40px;
@@ -470,7 +486,7 @@ aside {
   align-items: center;
   flex-flow: column;
   width: 100%;
-  margin: 18px auto;
+  margin: 8px auto;
 }
 
 .entrées {
@@ -494,6 +510,7 @@ aside {
   width: 90%;
   border-radius: 15px;
   margin: 7px 0;
+  box-shadow: 1px 7px 7px #e1e1e1;
 }
 .MetsAChoisir .DescPlat {
   margin-left: 10px;
@@ -517,18 +534,19 @@ aside {
   margin-right: 20px;
 }
 .MetsAChoisir .DescPlat .price h4 {
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 14px;
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .MetsAChoisir .DescPlat .price p {
+  font-size: 0.95em;
   font-weight: bold;
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   margin-right: 0;
 }
 .MetsAChoisir .DescPlat:hover + .check {
